@@ -1,17 +1,15 @@
 
-var sumArr = [];
-
-// ------------------------ sum() ------------------------------------
+// ------------------------multiply()------------------------------------
 //passes test
-var sum = function(numA, numB){
-  let sumArr = [];
-  let stringSum;
+var multiply = function(numA, numB){
+  let multArr = [];
+  let stringMult;
 
-  let numSum = numA + numB;
-  sumArr.push(numSum);
-  stringSum = `The sum of 4 and 7 is ${numSum}.`;
-  sumArr.push(stringSum);
+  let numMult = numA * numB;
+  multArr.push(numMult);
+  stringMult = `The product of 5 and 9 is ${numMult}.`;
+  multArr.push(stringMult);
   //   console.log(sumArr);
-  return sumArr;
+  return multArr;
 };
-// -----------------<<<------ sum() ------------------------------------
+  // ----------------<<<-----multiply()------------------------------------
