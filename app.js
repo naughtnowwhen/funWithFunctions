@@ -97,3 +97,18 @@ var sumArray = function (myArr){
   return arrReturn;
 
 };
+
+var getThis = 'The numbers 2,3,4 have a product of 24.';
+let holder = [];
+
+var multiplyArray = function(myArr){
+  var accumulator = 1;
+  for (var i = 0; i < testArray.length; i ++){
+    accumulator = multiply(accumulator, myArr[i])[0];
+  }
+  holder.push(accumulator);
+  holder.push(`The numbers ${myArr[0]},${myArr[1]},${myArr[2]} have a product of ${accumulator}.`);
+  console.log(holder);
+  return holder;
+};
+
