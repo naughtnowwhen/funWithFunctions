@@ -1,18 +1,18 @@
 
-var sumArr = [];
+var ArrforSum = [];
 
 // ------------------------ sum() ------------------------------------
 //passes test
 var sum = function(numA, numB){
-  let sumArr = [];
+  let ArrforSum = [];
   let stringSum;
 
   let numSum = numA + numB;
-  sumArr.push(numSum);
+  ArrforSum.push(numSum);
   stringSum = `The sum of 4 and 7 is ${numSum}.`;
-  sumArr.push(stringSum);
-  //   console.log(sumArr);
-  return sumArr;
+  ArrforSum.push(stringSum);
+  //   console.log(ArrforSum);
+  return ArrforSum;
 };
 // -----------------<<<------ sum() ------------------------------------
 
@@ -62,4 +62,38 @@ sumAndMultiply = function(numA,numB,numC) {
   myArr.push(stringMult);
 
   return myArr;
+};
+
+var testArray = [2, 3, 4];
+var accumulator = 0;
+
+// var sumArray = function (myArr){
+//   for (var i = 0; i < myArr.length; i ++){
+//     accumulator = sum(accumulator,myArr[i])[0];
+//     console.log(accumulator);
+//   }
+//   return accumulator;
+// };
+
+// sumArray(testArray);
+
+//working
+
+var needToGet ='2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+
+var sumArray = function (myArr){
+  var arrReturn = [];
+  // let counter = 0;
+  //   for (var i = 0; i <myArr.length; i++){
+  var firstTwo = sum(myArr[0],myArr[1])[0];
+  console.log(firstTwo, 'first two');
+  var secondTwo = sum(myArr[2],0)[0];
+  var allTogetherNow = sum(firstTwo,secondTwo)[0];
+  console.log(allTogetherNow, 'alltogethernow');
+  //   }
+  arrReturn.push(allTogetherNow);
+  arrReturn.push(`${myArr[0]},${myArr[1]},${myArr[2]} was passed in as an array of numbers, and ${allTogetherNow} is their sum.`);
+  console.log(arrReturn);  
+  return arrReturn;
+
 };
